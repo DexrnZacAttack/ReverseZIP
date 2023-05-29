@@ -34,7 +34,7 @@ void workfile() {
 int main() {
     logo();
     printf("-=Welcome to ReverseZip=-\n");
-    printf("The World's most 100 Percent Lossy compression program\n");
+    printf("The world's first 200 Percent lossless compression program\n");
     printf("Works on ANY file!\n");
     workfile();
     return 0;
