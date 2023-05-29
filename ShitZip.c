@@ -1,6 +1,8 @@
 #include <stdio.h>
 
 char filename[] = "";
+    char *buffer;
+    long fileSize;
 
 void logo() {
 	printf("  _________.__    .__  __    __________.__        \n");
@@ -22,9 +24,19 @@ int main() {
 void workfile() {
 	printf("what file to you want to compress? \n");
 	scanf("%s" , &filename);
-	FILE *file = fopen(filename,"w");
+	FILE *file = fopen(filename,"rb");
+	fseek(filename, 0, SEEK_END);
+        fileSize = ftell(filename);
+        fseek(filename, 0, SEEK_SET);
+	buffer = (char *)malloc(2 * fileSize);
+	fread(buffer, 1, fileSize, filename);
 	fclose(filename);
-	printf("file comressed");
+	outputFile = fopen("filename", "wb");
+	fwrite(buffer, 1, fileSize, filename);
+        fwrite(buffer, 1, fileSize, filename);
+	fclose(filename);
+	free(buffer);
+	printf("File has been "Compressed"");
 }
 
 
