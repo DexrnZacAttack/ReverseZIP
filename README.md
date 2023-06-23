@@ -1,5 +1,5 @@
-# ShitZip
-### The Worlds most 100 Precent Lossy compression program!
+# ReverseZip
+### The Worlds most 200 Percent Lossless compression program!
 
         
 ## Disclaimer: this program is a joke
